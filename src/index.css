@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #f9f6f5;
+  --color-surface: #f9f6f5;
+  --color-on-surface: #2f2e2e;
+  --color-on-surface-variant: #5c5b5b;
+  
+  --color-primary: #954400;
+  --color-primary-dim: #823b00;
+  --color-primary-container: #ff7b04;
+  --color-on-primary: #fff0e9;
+  --color-primary-fixed: #ff7b04;
+  
+  --color-secondary: #755700;
+  --color-secondary-container: #ffca4d;
+  --color-on-secondary-container: #5c4400;
+  --color-secondary-fixed: #ffca4d;
+  --color-on-secondary-fixed: #443100;
+
+  --color-tertiary: #515d64;
+  --color-tertiary-container: #e6f3fb;
+  --color-on-tertiary-container: #505c62;
+
+  --color-surface-container: #eae7e7;
+  --color-surface-container-low: #f3f0ef;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e5e2e1;
+  --color-surface-container-highest: #dfdcdc;
+
+  --color-outline: #787676;
+  --color-outline-variant: #afacac;
+
+  /* shadcn overrides */
+  --background: #f9f6f5;
+  --foreground: #2f2e2e;
+  --card: #ffffff;
+  --card-foreground: #2f2e2e;
+  --popover: #ffffff;
+  --popover-foreground: #2f2e2e;
+  --primary: #954400;
+  --primary-foreground: #fff0e9;
+  --secondary: #ffca4d;
+  --secondary-foreground: #443100;
+  --muted: #f3f0ef;
+  --muted-foreground: #5c5b5b;
+  --accent: #f3f0ef;
+  --accent-foreground: #2f2e2e;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #dfdcdc;
+  --input: #dfdcdc;
+  --ring: #954400;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-outline-variant;
+  }
+  body {
+    @apply bg-background text-on-surface font-body;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
